@@ -1,0 +1,138 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+<section>
+  <div class="lightBg">
+    <div class="container">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h4 class="text-uppercase">Contact Me</h4>
+      <br>
+
+        <form id="contactForm" method="POST" action="/contact/">
+        {% csrf_token %}
+            <label for="name">Name</label>
+            {{form.name}}
+
+            <label for="email">Email</label>
+            {{form.email}}
+
+            <label for="subject">Message</label>
+            {{form.message}}
+            <br>
+
+            <input class='btn btnPrimary' type="submit" value="Submit">
+            <br>
+            <br>
+
+        </form>
+    </div>
+  </div>
+
+
+
+</section>
+
+
+
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    #map {
+      height: 400px;
+      /* The height is 400 pixels */
+      width: 100%;
+      /* The width is the width of the web page */
+    }
+    </style>
+    </head>
+
+        <body>
+
+
+          <!--The div element for the map -->
+          <div id="map"></div>
+      
+          <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+          <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4tdeMesjGcFYZWBa8NyH511tBdQ_uthA&callback=initMap&libraries=&v=weekly&channel=2"
+            async
+          ></script>
+        </body>
+
+    <script>
+    function initMap() {
+      // The location of Uluru
+      const uluru = { lat: 52.379189, lng: 4.899431 };
+      // The map, centered at Uluru
+      const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 5,
+        center: uluru,
+      });
+      // The marker, positioned at Uluru
+      const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+      });
+    }
+    </script>
+    
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================================
+End Content
+================================= -->
+{%endblock%}
+    

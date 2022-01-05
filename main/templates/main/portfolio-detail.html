@@ -1,0 +1,186 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<!-- ================================
+Start SEO blocks
+================================= -->
+{% block title %}{% endblock %}
+{% block decription %}{% endblock %}
+{% block keywords %}{% endblock %}
+<!-- ================================
+END SEO blocks
+================================= -->
+
+<!-- ================================
+Start CSS blocks
+================================= -->
+{% block extend_header %}{% endblock %}
+<!-- ================================
+END CSS blocks
+================================= -->
+
+<!-- ================================
+Start script blocks
+================================= -->
+{% block extend_footer %}{% endblock %}
+<!-- ================================
+END script blocks
+================================= -->
+
+<!-- ================================
+Start Content
+================================= -->
+{% block content %}
+<section>
+
+
+        <div class="sectionSpaceSm">
+          <div class="container">
+            <br>
+            <br>
+            
+            <h4 class="text-uppercase">{{object.name}}</h4>
+
+            {{object.body|safe}}
+
+
+            {% if object.name == "Student Enrollment Dashboards" %}
+         
+
+
+            <br>
+            <br>
+            <h5 class="text-uppercase">Institutional Enrollment</h5>
+            <br>
+            <p class="fz-16">
+  
+              The trends for enrollment in Academic Degree Programs and in the English Language Institute for each academic semester. (Note: Starting in Fall 2021 ELI became CAPA).
+            </p> 
+            {% endif %}
+         </div>
+        </div>
+
+
+          <div class="container lightBg">
+            <br>
+            {% if object.name == "University Transcript System using VBA" %}
+            <iframe width="820" height="485" src="https://www.youtube.com/embed/i4CI-eQeQY4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            {% endif %}
+            {% if object.name == "Student Enrollment Dashboards" %}
+
+
+
+            <iframe width="850" height="485" src="https://app.powerbi.com/view?r=eyJrIjoiODQ4ZDBlNTItNGViYi00OTA1LThiZWItYmJiZDM4YTY3M2I3IiwidCI6IjI1YzdiYmJlLWUzYjMtNDdiNS04NDI1LTY2YjYzMzMyMTdmNSIsImMiOjl9&pageName=ReportSectiondd23038ce28465387c31" frameborder="0" allowFullScreen="true"></iframe> 
+            <br>
+          </div>
+
+
+
+
+
+        
+            <div class="sectionSpaceSm">
+              <div class="container">
+                <br>
+                <br>
+                
+                <h4 class="text-uppercase">Collegiate Enrollment</h4>
+                <br>
+                <p class="fz-16">
+  
+                  The enrollment trends for both Academics and ELI are broken down by College. Enrollment for each gender is also displayed.
+               </p>  
+    
+             </div>
+            </div>
+          </div>
+          
+           <div class="container lightBg">     
+             <br>  
+           <iframe width="850" height="485" src="https://app.powerbi.com/view?r=eyJrIjoiNDQzOWNkYWMtMjg5NC00N2M1LWE5N2UtNWNjMGFhMDk2ZjQ3IiwidCI6IjI1YzdiYmJlLWUzYjMtNDdiNS04NDI1LTY2YjYzMzMyMTdmNSIsImMiOjl9&pageName=ReportSection13530ca87963eed0c6af" frameborder="0" allowFullScreen="true"></iframe>
+            </div>
+ 
+          
+          
+
+
+            <div class="sectionSpaceSm">
+              <div class="container">
+                <br>
+                <br>
+                
+                <h4 class="text-uppercase">New Student Enrollment Trends</h4>
+                <br>
+                <p class="fz-16">
+  
+                  The time-series trends for incoming students are displayed, with a break down by entry level (distinguishing between entry directly into academics vs entry into ELI).
+                </p>  
+    
+             </div>
+            </div>
+          </div>
+          
+           <div class="container lightBg">     
+             <br>  
+             <iframe width="850" height="485" src="https://app.powerbi.com/view?r=eyJrIjoiMmQwNzM5NzQtNDAxYi00ZDRlLWIzZDYtNDY4OGZhNzhiMjA5IiwidCI6IjI1YzdiYmJlLWUzYjMtNDdiNS04NDI1LTY2YjYzMzMyMTdmNSIsImMiOjl9&pageName=ReportSectiond6bfc0b81ebb866c1181" frameborder="0" allowFullScreen="true"></iframe>
+            </div>   
+
+
+
+
+
+
+
+
+
+            <div class="sectionSpaceSm">
+              <div class="container">
+                <br>
+                <br>
+                
+                <h4 class="text-uppercase">Class Sizes</h4>
+                <br>
+                <p class="fz-16">
+  
+                  In this dashboard the class sizes are presented for Spring and Fall 2021.
+                </p>  
+    
+             </div>
+            </div>
+          </div>
+          
+           <div class="container lightBg">     
+             <br>  
+             <iframe width="850" height="485" src="https://app.powerbi.com/view?r=eyJrIjoiOGE2YWRmNzMtMDBlYy00Y2YwLWJmOWQtMGZlMmUyNGNjMTZmIiwidCI6IjI1YzdiYmJlLWUzYjMtNDdiNS04NDI1LTY2YjYzMzMyMTdmNSIsImMiOjl9&pageName=ReportSectionf56e1e9f4beb83a57dcf" frameborder="0" allowFullScreen="true"></iframe>
+            </div>   
+
+
+
+
+
+
+           {% endif %}  
+
+
+
+
+
+            {% if object.name == "World Trade Statistics" %}
+            <iframe width="850" height="485" src="https://app.powerbi.com/view?r=eyJrIjoiYjg5ZTMwMzktYmM5MS00YzM5LWI5YTYtOWUwYjY3YzZiZGMyIiwidCI6IjI1YzdiYmJlLWUzYjMtNDdiNS04NDI1LTY2YjYzMzMyMTdmNSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+            {% endif %}           
+            {% if object.name == "Feedback Survey Dashboard" %}
+            <iframe width="850" height="485" src="https://app.powerbi.com/view?r=eyJrIjoiZGNiZjkxY2EtNGJjNi00ODJlLWE2YTItODA2OTA1OGUzNDM3IiwidCI6IjI1YzdiYmJlLWUzYjMtNDdiNS04NDI1LTY2YjYzMzMyMTdmNSIsImMiOjl9" frameborder="0" allowFullScreen="true"></iframe>
+            {% endif %}            
+          
+          
+          </div>
+
+
+</section>
+
+
+
+
+
+
+{%endblock%}
